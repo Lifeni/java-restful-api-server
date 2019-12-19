@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="lfn.java.GUI">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="38" y="23" width="633" height="376"/>
+    </constraints>
+    <properties>
+      <enabled value="false"/>
+      <font name="Courier New"/>
+    </properties>
+    <border type="none">
+      <size top="5" left="5" bottom="5" right="5"/>
+    </border>
+    <children>
+      <grid id="81de" binding="inputPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="0" right="10" weightx="1.0" weighty="0.0" ipadx="10" ipady="10"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Courier New"/>
+          <preferredSize width="650" height="90"/>
+          <verifyInputWhenFocusTarget value="true"/>
+        </properties>
+        <border type="empty">
+          <font/>
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children>
+          <component id="8f3d9" class="javax.swing.JComboBox" binding="method">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="5" bottom="0" right="5" weightx="0.2" weighty="1.0" ipady="15"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-1"/>
+              <editable value="false"/>
+              <focusable value="false"/>
+              <font name="Consolas" size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <model>
+                <item value="GET"/>
+                <item value="POST"/>
+                <item value="PUT"/>
+                <item value="DELETE"/>
+              </model>
+              <opaque value="true"/>
+              <popupVisible value="false"/>
+            </properties>
+          </component>
+          <component id="803a0" class="javax.swing.JButton" binding="send">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="5" bottom="0" right="5" weightx="0.2" weighty="1.0" ipady="13"/>
+            </constraints>
+            <properties>
+              <background color="-12808449"/>
+              <font name="Consolas" size="16" style="1"/>
+              <foreground color="-1"/>
+              <hideActionText value="true"/>
+              <text value="SEND -&gt;"/>
+              <toolTipText value="发送请求"/>
+              <verticalAlignment value="0"/>
+            </properties>
+          </component>
+          <component id="ba05b" class="javax.swing.JTextField" binding="url">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag top="0" left="5" bottom="0" right="5" weightx="1.0" weighty="1.0" ipadx="100" ipady="20"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Consolas" size="16"/>
+              <foreground color="-16777216"/>
+              <horizontalAlignment value="0"/>
+              <text value="http://localhost:8080/server/api/get"/>
+            </properties>
+          </component>
+          <component id="5f640" class="javax.swing.JLabel" binding="request">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="10" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <labelFor value="8f3d9"/>
+              <text value="Request"/>
+            </properties>
+          </component>
+          <component id="da93e" class="javax.swing.JLabel" binding="idTips">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="10" bottom="0" right="10" weightx="0.0" weighty="0.0" ipadx="20" ipady="8"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="false"/>
+              <background color="-43467"/>
+              <doubleBuffered value="false"/>
+              <enabled value="true"/>
+              <focusCycleRoot value="false"/>
+              <font name="Courier New" size="16" style="1"/>
+              <foreground color="-1"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <opaque value="true"/>
+              <text value="{id} needs to be given"/>
+              <toolTipText value="必须输入 ID"/>
+              <visible value="false"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="e6ed5" binding="valuePanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="0" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-1"/>
+          <enabled value="true"/>
+          <font name="Courier New"/>
+          <preferredSize width="700" height="202"/>
+        </properties>
+        <border type="empty">
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children>
+          <scrollpane id="29dfa" binding="headersPanel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <verticalScrollBarPolicy value="20"/>
+            </properties>
+            <border type="etched"/>
+            <children>
+              <component id="70c0d" class="javax.swing.JTextArea" binding="headers">
+                <constraints/>
+                <properties>
+                  <autoscrolls value="true"/>
+                  <background color="-1"/>
+                  <disabledTextColor color="-4473925"/>
+                  <editable value="true"/>
+                  <enabled value="false"/>
+                  <font name="Consolas" size="12"/>
+                  <foreground color="-16777216"/>
+                  <lineWrap value="true"/>
+                  <margin top="5" left="5" bottom="5" right="5"/>
+                  <text value="// Works in POST and PUT methods&#10;// Defaults:&#10;Content-Type: application/json"/>
+                  <wrapStyleWord value="false"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <scrollpane id="d74c7" binding="bodyPanel">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+            </properties>
+            <border type="etched"/>
+            <children>
+              <component id="bff67" class="javax.swing.JTextArea" binding="body">
+                <constraints/>
+                <properties>
+                  <background color="-1"/>
+                  <disabledTextColor color="-4473925"/>
+                  <enabled value="false"/>
+                  <font name="Consolas" size="12"/>
+                  <foreground color="-16777216"/>
+                  <lineWrap value="true"/>
+                  <margin top="5" left="5" bottom="5" right="5"/>
+                  <text value="// Works in POST and PUT methods&#10;// Only JSON format&#10;// Defaults:&#10;{&#10;    &quot;user&quot;:&quot;client&quot;,&#10;    &quot;message&quot;:&quot;hello!&quot;&#10;}&#10;"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="5f741" class="javax.swing.JButton" binding="resetHeaders">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-12808449"/>
+              <foreground color="-1"/>
+              <text value="Reset"/>
+              <toolTipText value="恢复默认"/>
+            </properties>
+          </component>
+          <component id="959cd" class="javax.swing.JButton" binding="resetBody">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-12808449"/>
+              <foreground color="-1"/>
+              <text value="Reset"/>
+              <toolTipText value="恢复默认"/>
+            </properties>
+          </component>
+          <component id="ce750" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="10" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Headers"/>
+            </properties>
+          </component>
+          <component id="624fa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="10" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <preferredSize width="66" height="22"/>
+              <text value="Body"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="ff68c" binding="outputPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="10" right="10" weightx="0.5" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <font name="Courier New"/>
+          <maximumSize width="2147483647" height="2147483647"/>
+          <preferredSize width="700" height="362"/>
+          <requestFocusEnabled value="true"/>
+        </properties>
+        <border type="empty">
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children>
+          <component id="688a1" class="javax.swing.JLabel" binding="responseLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="10" right="10" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <text value="Response"/>
+            </properties>
+          </component>
+          <scrollpane id="87c4e" binding="responsePanel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="5.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+              <requestFocusEnabled value="true"/>
+              <wheelScrollingEnabled value="true"/>
+            </properties>
+            <border type="etched">
+              <size top="0" left="0" bottom="0" right="0"/>
+            </border>
+            <children>
+              <component id="a0acd" class="javax.swing.JTextArea" binding="response">
+                <constraints/>
+                <properties>
+                  <background color="-1"/>
+                  <disabledTextColor color="-4473925"/>
+                  <editable value="false"/>
+                  <font name="Consolas" size="14"/>
+                  <foreground color="-16777216"/>
+                  <lineWrap value="false"/>
+                  <margin top="5" left="5" bottom="5" right="5"/>
+                  <rows value="0"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <scrollpane id="5a51" binding="logsPanel">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="5" bottom="5" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-1"/>
+              <foreground color="-16777216"/>
+            </properties>
+            <border type="etched">
+              <title-color color="-4473925"/>
+              <size top="0" left="10" bottom="0" right="5"/>
+            </border>
+            <children>
+              <component id="c94c1" class="javax.swing.JTextArea" binding="logs">
+                <constraints/>
+                <properties>
+                  <background color="-1"/>
+                  <disabledTextColor color="-4473925"/>
+                  <editable value="false"/>
+                  <font name="Consolas" size="11"/>
+                  <foreground color="-16777216"/>
+                  <lineWrap value="false"/>
+                  <margin top="5" left="5" bottom="5" right="5"/>
+                  <opaque value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="8d8b6" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="10" right="10" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <font size="16" style="1"/>
+              <foreground color="-16777216"/>
+              <preferredSize width="78" height="22"/>
+              <text value="Logs"/>
+            </properties>
+          </component>
+          <component id="b7886" class="javax.swing.JButton" binding="clean">
+            <constraints>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="10" bottom="0" right="10" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-43467"/>
+              <foreground color="-1"/>
+              <selected value="false"/>
+              <text value="Clean"/>
+              <toolTipText value="清除"/>
+            </properties>
+          </component>
+          <component id="e92c8" class="javax.swing.JButton" binding="save">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="5" bottom="0" right="5" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <autoscrolls value="true"/>
+              <background color="-12808449"/>
+              <foreground color="-1"/>
+              <text value="Save"/>
+              <toolTipText value="保存"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="4c180" binding="statusPanel" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="0" right="10" weightx="1.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-12808449"/>
+          <font name="Courier New"/>
+          <foreground color="-16777216"/>
+          <preferredSize width="700" height="44"/>
+          <toolTipText value=""/>
+        </properties>
+        <border type="empty">
+          <font/>
+          <size top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children>
+          <component id="a835a" class="javax.swing.JLabel" binding="status">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="10" bottom="5" right="10" weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+              <font name="Consolas" size="20" style="1"/>
+              <foreground color="-1"/>
+              <requestFocusEnabled value="false"/>
+              <text value="Status"/>
+              <toolTipText value="状态"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
