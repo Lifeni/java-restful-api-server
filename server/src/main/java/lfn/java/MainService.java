@@ -59,4 +59,8 @@ public class MainService {
     public String deleteMethod(@PathParam("id") String id) {
         return EventHandler.remove(id);
     }
+
+    public static void main(String args[]) {
+        DBHandler.run();
+    }
 }

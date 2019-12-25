@@ -44,6 +44,9 @@ public class GUI {
                     return;
                 }
 
+                response.setText("");
+                response.setFont(new Font("Consolas", Font.PLAIN, 14));
+
                 statusPanel.setBackground(new Color(60, 142, 255));
                 status.setText("Waiting");
                 send.setEnabled(false);
@@ -447,17 +450,18 @@ public class GUI {
         gbc.fill = GridBagConstraints.BOTH;
         gbc.insets = new Insets(5, 5, 5, 5);
         outputPanel.add(responsePanel, gbc);
-        responsePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), null));
+        responsePanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0), null));
         response = new JTextArea();
         response.setBackground(new Color(-1));
         response.setDisabledTextColor(new Color(-4473925));
         response.setEditable(false);
-        Font responseFont = this.$$$getFont$$$("Consolas", -1, 14, response.getFont());
+        Font responseFont = this.$$$getFont$$$("Microsoft YaHei", -1, 18, response.getFont());
         if (responseFont != null) response.setFont(responseFont);
         response.setForeground(new Color(-16777216));
         response.setLineWrap(false);
         response.setMargin(new Insets(5, 5, 5, 5));
         response.setRows(0);
+        response.setText("\nJava 搭建简单的 RESTful API 服务器\n---\n面向对象的程序设计课程作业。\n此程序为 API 测试程序，仅用于此项目的测试。\n有关这个项目的更多信息，可以查看帮助文档。\n---\n作者：梁峰宁\n学号：2018201301\n时间：2019.12.25\n");
         responsePanel.setViewportView(response);
         logsPanel = new JScrollPane();
         logsPanel.setAutoscrolls(true);
@@ -582,7 +586,4 @@ public class GUI {
         return rootPanel;
     }
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
-    }
 }

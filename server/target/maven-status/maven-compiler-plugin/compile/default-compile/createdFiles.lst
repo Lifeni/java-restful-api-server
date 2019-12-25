@@ -1,3 +1,4 @@
-lfn\java\MainService.class
 lfn\java\DataModel.class
+lfn\java\DBHandler.class
 lfn\java\EventHandler.class
+lfn\java\MainService.class

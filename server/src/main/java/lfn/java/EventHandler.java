@@ -3,17 +3,17 @@ package lfn.java;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.bson.Document;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class EventHandler {
-    private static List<DataModel> list = new ArrayList<>();
-
     public static String add(DataModel data) {
         ObjectMapper mapper = new ObjectMapper();
         data.setId();
         data.setDate();
-        list.add(data);
+        DBHandler.add(data);
         try {
             return mapper.writeValueAsString(data);
         } catch (JsonProcessingException e) {
@@ -25,7 +25,7 @@ public class EventHandler {
     public static String find() {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            return mapper.writeValueAsString(list);
+            return mapper.writeValueAsString(DBHandler.find());
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return "{\"status\":\"ERROR\"}";
@@ -35,12 +35,11 @@ public class EventHandler {
     public static String find(String id) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            for (DataModel data : list) {
-                if (data.getId().equals(id)) {
-                    return mapper.writeValueAsString(data);
-                }
+            Document document = DBHandler.find(id);
+            if (document == null) {
+                return "{\"status\":\"NOT FOUND\"}";
             }
-            return "{\"status\":\"NOT FOUND\"}";
+            return mapper.writeValueAsString(document);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return "{\"status\":\"ERROR\"}";
@@ -50,15 +49,13 @@ public class EventHandler {
     public static String update(DataModel data, String id) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            for (DataModel d : list) {
-                if (d.getId().equals(id)) {
-                    d.setDate();
-                    d.setUser(data.getUser());
-                    d.setMessage(data.getMessage());
-                    return mapper.writeValueAsString(d);
-                }
+            DataModel temp = data;
+            temp.setDate();
+            Document document = DBHandler.update(id, temp);
+            if (document == null) {
+                return "{\"status\":\"NOT FOUND\"}";
             }
-            return "{\"status\":\"NOT FOUND\"}";
+            return mapper.writeValueAsString(document);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return "{\"status\":\"ERROR\"}";
@@ -68,13 +65,11 @@ public class EventHandler {
     public static String remove(String id) {
         ObjectMapper mapper = new ObjectMapper();
         try {
-            for (DataModel data : list) {
-                if (data.getId().equals(id)) {
-                    list.remove(data);
-                    return mapper.writeValueAsString(data);
-                }
+            Document document = DBHandler.remove(id);
+            if (document == null) {
+                return "{\"status\":\"NOT FOUND\"}";
             }
-            return "{\"status\":\"NOT FOUND\"}";
+            return mapper.writeValueAsString(document);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
             return "{\"status\":\"ERROR\"}";

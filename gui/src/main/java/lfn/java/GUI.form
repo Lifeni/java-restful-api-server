@@ -273,7 +273,7 @@
               <requestFocusEnabled value="true"/>
               <wheelScrollingEnabled value="true"/>
             </properties>
-            <border type="etched">
+            <border type="empty">
               <size top="0" left="0" bottom="0" right="0"/>
             </border>
             <children>
@@ -283,11 +283,12 @@
                   <background color="-1"/>
                   <disabledTextColor color="-4473925"/>
                   <editable value="false"/>
-                  <font name="Consolas" size="14"/>
+                  <font name="Microsoft YaHei" size="18"/>
                   <foreground color="-16777216"/>
                   <lineWrap value="false"/>
                   <margin top="5" left="5" bottom="5" right="5"/>
                   <rows value="0"/>
+                  <text value="&#10;Java 搭建简单的 RESTful API 服务器&#10;---&#10;面向对象的程序设计课程作业。&#10;此程序为 API 测试程序，仅用于此项目的测试。&#10;有关这个项目的更多信息，可以查看帮助文档。&#10;---&#10;作者：梁峰宁&#10;学号：2018201301&#10;时间：2019.12.25&#10;"/>
                 </properties>
               </component>
             </children>
